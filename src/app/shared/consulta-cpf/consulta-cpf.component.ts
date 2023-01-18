@@ -12,6 +12,8 @@ export class ConsultaCpfComponent {
   mensagemErro: boolean = false;
   formCpf: FormGroup<{ cpf: FormControl<any>; }>;
   imagePath: any = ""
+  dadosCooperado: boolean = false;
+  buttonNovoCadastro: boolean = false; 
 
 
   constructor(private router: Router) {
@@ -22,18 +24,18 @@ export class ConsultaCpfComponent {
 
     this.imagePath = '/assets/imagens/imagemFundo.jpeg'
     
-   }
-
+  }
 
   consultarCpf() {
     //Validação do CPF, aqui você pode colocar sua lógica de validação
     let cpfValido = true;
     if (cpfValido) {
-      this.router.navigate(['/dados-cooperado', this.formCpf.value.cpf]);
+      this.dadosCooperado = true
+      this.buttonNovoCadastro = true
     } else {
       this.mensagemErro = true;
     }
-  }
+  } 
 
 
   aplicarMascara(event: any) {

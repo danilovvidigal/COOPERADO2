@@ -4,34 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConsultaCpfComponent } from './consulta-cpf/consulta-cpf.component';
-import { DadosCooperadoComponent } from './dados-cooperado/dados-cooperado.component';
-import { NavbarComponent } from './navbar/navbar.component';
-
-
-
-
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConsultaCpfComponent,
-    DadosCooperadoComponent,
-    NavbarComponent,
-    
-    
-    
-    
+   
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    
-    
-    
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

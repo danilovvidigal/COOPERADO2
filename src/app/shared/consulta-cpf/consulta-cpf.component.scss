@@ -8,7 +8,7 @@
     width: 40%;
     position: relative;
     left: 16%;
-    top: -55%;
+    top: -60%;
 }
 
 .cpf {
@@ -21,6 +21,12 @@
     background-color: #165C7D;
     width: 60%;
     border-radius: 3px;
+}
+
+@media (max-width: 709px) {
+    .botao {
+        width: 64% !important;
+    }
 }
 
 .inputRadius {
@@ -78,10 +84,28 @@
 
 .informe {
     position: relative;
-    bottom: 8pc;
+    bottom: 10vw;
     flex-direction: column;
-    width: 126%;
+    width: 130%;
     right: 4rem;
+
+}
+
+@media (max-width: 1050px) {
+    .informe {
+        position: relative;
+        position: relative;
+        bottom: 13vw;
+        left: 0%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .informe {
+        position: relative;
+        bottom: 19vw;
+    }
 }
 
 .cpfInforme {
@@ -90,21 +114,58 @@
     right: 4rem;
 }
 
+@media (max-width: 1050px) {
+    .cpfInforme {
+        position: relative;
+        left: 1%;
+    }
+
+}
+
 .footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: #FFFFFF;
     width: 300%;
-    height: 8rem;
+    height: 6rem;
     position: relative;
     right: 20%;
-    margin-top: 11%;
+    top: 7vw;
+    padding: 5px;
 }
+
+@media (max-width: 1050px) {
+    .footer {
+        position: relative;
+        display: flex;
+        right: 6vw;
+        top: 12vw;
+    }
+}
+
 
 .is-invalid {
     border-color: red;
   }
+
+  .buttonFooter {
+    border: 2px solid #165C7D;
+    color: #165C7D;
+    margin-left: 2%;
+    font-weight: 500;
+    border-radius: 3px;
+    margin-bottom: 1%;
+  }
+
+
+  @media (max-width: 800px) {
+    .inputCpf {
+   // left: 12vw !important;
+   // top: 8vw !important;
+    position: relative !important;
+    }
+}
 
 ////////////////////////////////
 @media (max-width: 600px) {
@@ -140,12 +201,6 @@
     }
 }
 
-@media (max-width: 600px) {
-    .botao {
-        width: 100%;
-        border-radius: 0px;
-    }
-}
 
 @media (max-width: 600px) {
     .container {

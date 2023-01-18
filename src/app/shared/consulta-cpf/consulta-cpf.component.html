@@ -1,0 +1,51 @@
+<div class="alinhamento p-1">
+   <div class="container">
+      <div class="circle">
+      </div>
+      <hr class="line">
+      <div class="circle second"></div>
+      <hr class="line">
+      <div class="circle second"></div>
+      <hr class="line">
+      <div class="circle second"></div>
+   </div>
+   <div class="linha-frases">
+      <p style="color: #165C7D;">Inicio</p>
+      <p>Documentos</p>
+      <p>Dados Cadastrais</p>
+      <p>Admissão</p>
+   </div>
+   <div class="d-flex justify-content informe">
+      <h3>Informe o CPF do futuro cooperado (a)</h3>
+      <p style="color: #4F575E;">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
+         Digite apenas os números (sem pontos ou traços). </p>
+   </div>
+
+   <div class="cpfInforme d-flex align-items-center">
+      <form [formGroup]="formCpf">
+         <p style="display:flex; flex-direction: column; font-weight: bold;">CPF</p>
+         <div class="form-group position-relative d-flex justify-content-between inputCpf" style="height: 45px;
+         width: 145%;">
+            <input type="text" formControlName="cpf" placeholder="000.000.000-00" class="form-control" inputRadius
+               [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}" (input)="aplicarMascara($event)">
+            
+            <button class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
+            <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
+               class="invalid-feedback position-absolute" style="left:0; top:100%">
+               Informe um CPF válido
+            </div>
+         </div>
+      </form>
+   </div>
+
+   <app-dados-cooperado *ngIf="dadosCooperado">
+
+   </app-dados-cooperado>
+
+
+   <div class="footer">
+      <button class="btn btn-light buttonFooter"> Dicas para abertura de conta</button>
+      <button *ngIf="buttonNovoCadastro" class="btn btn-light buttonFooter"> em construção</button>
+
+   </div>
+</div>
