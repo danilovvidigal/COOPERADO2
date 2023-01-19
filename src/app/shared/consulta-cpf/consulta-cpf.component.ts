@@ -14,6 +14,8 @@ export class ConsultaCpfComponent {
   imagePath: any = ""
   dadosCooperado: boolean = false;
   buttonNovoCadastro: boolean = false; 
+  disableButton: boolean = true;
+  consultando: boolean = false;
 
 
   constructor(private router: Router) {
@@ -21,26 +23,41 @@ export class ConsultaCpfComponent {
     this.formCpf = new FormGroup({
       cpf: new FormControl("", [Validators.required, Validators.pattern("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$")])
     }); 
-
-    this.imagePath = '/assets/imagens/imagemFundo.jpeg'
+    //////////
+    this.formCpf.valueChanges.subscribe(val => {
+      if(val.cpf){
+       this.disableButton = !this.formCpf.valid;
+      }
+     });
+     
     
   }
 
   consultarCpf() {
-    //Validação do CPF, aqui você pode colocar sua lógica de validação
-    let cpfValido = true;
+    let cpfValido = this.validarCpf(this.cpf);
     if (cpfValido) {
       this.dadosCooperado = true
       this.buttonNovoCadastro = true
     } else {
       this.mensagemErro = true;
+      this.buttonNovoCadastro = true;
     }
   } 
+  validarCpf(cpf: string): boolean {
+    
+    return true;
+  }
+
+  
 
 
   aplicarMascara(event: any) {
     const cpf = event.target.value;
-    event.target.value = this.formatarCpf(cpf);
+    if (cpf.length <= 14) {
+      event.target.value = this.formatarCpf(cpf);
+    } else {
+      event.target.value = cpf.slice(0, 14);
+    }
   }
 
   formatarCpf(cpf: string): string {

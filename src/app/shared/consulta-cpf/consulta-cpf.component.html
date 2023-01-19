@@ -31,7 +31,7 @@
                [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}"
                 (input)="aplicarMascara($event)" style="border-radius: 3px;">
             
-            <button class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
+            <button [disabled]="disableButton" class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
             <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
                class="invalid-feedback position-absolute" style="left:0; top:100%">
                Informe um CPF válido
