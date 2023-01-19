@@ -4,6 +4,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ConsultaCpfComponent } from "./consulta-cpf/consulta-cpf.component";
 import { DadosCooperadoComponent } from "./dados-cooperado/dados-cooperado.component";
 import { NavbarComponent } from "./navbar/navbar.component";
+import { MatCardModule } from '@angular/material/card';
+
+
 
 
 @NgModule({
@@ -11,17 +14,17 @@ import { NavbarComponent } from "./navbar/navbar.component";
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
-		
+		MatCardModule
 	],
 	declarations: [
 		ConsultaCpfComponent,
 		DadosCooperadoComponent,
-		NavbarComponent
+		NavbarComponent,
 	],
 	exports: [
 		ConsultaCpfComponent,
 		DadosCooperadoComponent,
-		NavbarComponent
+		NavbarComponent,
 
 	],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]

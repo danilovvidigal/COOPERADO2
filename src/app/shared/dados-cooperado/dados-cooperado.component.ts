@@ -8,19 +8,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DadosCooperadoComponent implements OnInit {
   nome: string = "";
-  endereco: string = "";
-  telefone: string = ""
+  situacao: string = "";
+ 
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    debugger;
+
     this.route.paramMap.subscribe(params => {
       const cpf = params.get('cpf');
       //carregar dados do cooperado usando o cpf
-      this.nome = "John Doe";
-      this.endereco = "Rua tal";
-      this.telefone = "12345678";
+      this.nome = "John Doen";
+      this.situacao = "Regular";
+    
     });
   }
 }

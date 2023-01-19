@@ -11,23 +11,25 @@
    </div>
    <div class="linha-frases">
       <p style="color: #165C7D;">Inicio</p>
-      <p>Documentos</p>
+      <p  style="position: relative; left: 2%;">Documentos</p>
       <p>Dados Cadastrais</p>
       <p>Admissão</p>
    </div>
+   
    <div class="d-flex justify-content informe">
-      <h3>Informe o CPF do futuro cooperado (a)</h3>
-      <p style="color: #4F575E;">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
+      <h3 style="font-size: 22px;">Informe o CPF do futuro cooperado (a)</h3>
+      <p style="color: #4F575E; font-size: 11px;">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
          Digite apenas os números (sem pontos ou traços). </p>
    </div>
 
    <div class="cpfInforme d-flex align-items-center">
       <form [formGroup]="formCpf">
-         <p style="display:flex; flex-direction: column; font-weight: bold;">CPF</p>
+         <p style="display:flex; flex-direction: column; font-weight: bold; font-size: 14px;">CPF</p>
          <div class="form-group position-relative d-flex justify-content-between inputCpf" style="height: 45px;
          width: 145%;">
             <input type="text" formControlName="cpf" placeholder="000.000.000-00" class="form-control" inputRadius
-               [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}" (input)="aplicarMascara($event)">
+               [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}"
+                (input)="aplicarMascara($event)" style="border-radius: 3px;">
             
             <button class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
             <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
@@ -38,7 +40,7 @@
       </form>
    </div>
 
-   <app-dados-cooperado *ngIf="dadosCooperado">
+   <app-dados-cooperado *ngIf="dadosCooperado" style="position: absolute;bottom: 3%;width: 54%;">
 
    </app-dados-cooperado>
 

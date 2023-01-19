@@ -1,4 +1,4 @@
-{
+ {
   "name": "meu-projeto",
   "version": "0.0.0",
   "scripts": {
@@ -15,7 +15,8 @@
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/forms": "^14.0.0",
-    "@angular/material": "^7.0.0",
+    "@angular/material": "^10.2.4",
+    "@angular/cdk": "^10.2.4",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",

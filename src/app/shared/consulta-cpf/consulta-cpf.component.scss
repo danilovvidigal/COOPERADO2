@@ -38,8 +38,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 50%;
-    bottom: 11rem;
+    left: 38%;
+    bottom: 12rem;
+    padding: 20px;
 }
 
 .line {
@@ -76,18 +77,19 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    bottom: 11rem;
-    left: 51%;
+    bottom: 13rem;
+    left: 40%;
     font-family: Open sans-serif;
-    color: #889499
+    color: #889499;
 }
 
 .informe {
     position: relative;
-    bottom: 10vw;
+    bottom: 14vw;
     flex-direction: column;
-    width: 130%;
-    right: 4rem;
+    width: 140%;
+    right: 9rem;
+    padding: 40px;
 
 }
 
@@ -110,8 +112,9 @@
 
 .cpfInforme {
     position: relative;
-    bottom: 7rem;
-    right: 4rem;
+    bottom: 15rem;
+    width: 100%;
+    right: 17%;
 }
 
 @media (max-width: 1050px) {
@@ -130,19 +133,40 @@
     width: 300%;
     height: 6rem;
     position: relative;
-    right: 20%;
-    top: 7vw;
-    padding: 5px;
+    right: 30%;
+    /* top: 59vw; */
+    bottom: 1vw;
+    /* padding: 5px; */
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px)  {
     .footer {
         position: relative;
         display: flex;
-        right: 6vw;
-        top: 12vw;
+        right: 11vw;
+        bottom: 3vw;
     }
 }
+
+@media (max-width: 900px)  {
+    .footer {
+    position: relative;
+    display: flex;
+    right: 9vw;
+    bottom: 8vw;
+    }
+}
+
+@media (max-width: 650px)  {
+    .footer {
+        position: relative;
+        display: flex;
+        right: 17%;
+        bottom: 22vw;
+    }
+}
+
+
 
 
 .is-invalid {
