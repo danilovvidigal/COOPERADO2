@@ -28,17 +28,20 @@
          <div class="form-group position-relative d-flex justify-content-between inputCpf" style="height: 45px;
          width: 145%;">
             <input type="text" formControlName="cpf" placeholder="000.000.000-00" class="form-control" inputRadius
-               [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}"
-                (input)="aplicarMascara($event)" style="border-radius: 3px;">
+            [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}"
+             (input)="aplicarMascara($event)" style="border-radius: 3px;">
             
             <button [disabled]="disableButton" class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
             <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
                class="invalid-feedback position-absolute" style="left:0; top:100%">
-               Informe um CPF válido
+               Informe um CPF válido 
             </div>
+            <span *ngIf="mensagemErro" class="text-danger spanErro"> {{mensagemErro}}</span>
          </div>
       </form>
    </div>
+   
+   
 
    <app-dados-cooperado *ngIf="dadosCooperado" style="position: absolute;bottom: 3%;width: 54%;">
 

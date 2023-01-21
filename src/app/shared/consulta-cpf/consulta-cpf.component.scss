@@ -90,8 +90,18 @@
     width: 140%;
     right: 9rem;
     padding: 40px;
-
 }
+
+.spanErro {
+    width: 44%;
+    position: relative;
+    top: 4vw;
+    right: 35vw;
+    font-size: 10px;
+}
+.input-error {
+    border-color: red !important;
+  }
 
 @media (max-width: 1050px) {
     .informe {
