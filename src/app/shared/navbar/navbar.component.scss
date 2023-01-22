@@ -34,10 +34,19 @@
 .alinhamento {
     display: flex;
     flex-direction: column;
-    right: 70%;
     position: relative;
-    top: 8%;
+    right: 68vw;
 }
+
+@media (min-width: 1239px) {
+    .alinhamento {
+        position: relative;
+        display: flex;
+         right: 68vw;        
+    }
+
+}
+  
 
 .titulo { 
     font-weight: bold;
@@ -49,6 +58,15 @@
     left: 75%;
     color: #125D79;
     bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .sgv {
+        position: relative;
+        left: 78%;
+        color: #125D79;
+        bottom: -23px;
+    }
 }
 
 .destacado {
@@ -75,7 +93,30 @@
     }
 }
 
+@media (max-width: 900px) {
+    .alinhamento {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        right: 24vw;
+        top: -1vw;
+    }
 
+    .destacado {
+        color: #125D79;
+        background-color: white;
+        border: 2px solid #125D79;
+        box-shadow: 0 0 2px #125d79;
+        position: absolute;
+        left: 62%;
+        top: 25%;
+        border-radius: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
 
 @media (max-width: 600px) {
     .alinhamento {
@@ -95,8 +136,8 @@
 
     .navClasseInicio {
         position: absolute;
-        width: 93%;
-        left: 122px;
+        width: 105%;
+        left: 64px;
         height: 8rem;
         background-color: #f2f2f2 !important;
     }

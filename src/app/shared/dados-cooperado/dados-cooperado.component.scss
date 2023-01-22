@@ -69,3 +69,18 @@
     left: 22%;
     color: #040F14;
 }
+
+@media (max-width: 900px)   {
+    .matCard {
+        display: flex;
+        position: relative;
+        bottom: 15vw;
+        left: 1vw;
+        width: 156%;
+    }
+
+    .fontAlinhamento {
+        display: flex;
+    }
+    
+}

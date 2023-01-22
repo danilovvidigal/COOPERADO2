@@ -16,41 +16,51 @@
       <p>Admissão</p>
    </div>
    
-   <div class="d-flex justify-content informe">
+   <div class="informe">
       <h3 style="font-size: 22px;">Informe o CPF do futuro cooperado (a)</h3>
       <p style="color: #4F575E; font-size: 11px;">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
          Digite apenas os números (sem pontos ou traços). </p>
    </div>
 
-   <div class="cpfInforme d-flex align-items-center">
-      <form [formGroup]="formCpf">
+   <div class="cpfInforme">
+      <form [formGroup]="formCpf" (ngSubmit)="consultarCpf()">
+
          <p style="display:flex; flex-direction: column; font-weight: bold; font-size: 14px;">CPF</p>
-         <div class="form-group position-relative d-flex justify-content-between inputCpf" style="height: 45px;
-         width: 145%;">
-            <input type="text" formControlName="cpf" placeholder="000.000.000-00" class="form-control" inputRadius
-            [ngClass]="{'is-invalid': formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched}"
-             (input)="aplicarMascara($event)" style="border-radius: 3px;">
-            
-            <button [disabled]="disableButton" class="btn btn-primary botao" (click)="consultarCpf()">Consultar por CPF</button>
-            <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
-               class="invalid-feedback position-absolute" style="left:0; top:100%">
-               Informe um CPF válido 
+
+         <div class="inputCpf">
+
+            <input 
+            type="text" 
+            formControlName="cpf" 
+            placeholder="000.000.000-00" 
+            class="form-control input-invalid"
+            style="border-radius: 3px;" 
+            inputRadius
+            mask = "000.000.000-00"
+            [class.input-invalid]="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched"
+            >
+
+
+            <button [disabled]="formCpf.get('cpf')?.errors?.['validadorCpf']" class="btn btn-primary botao" type="submit">Consultar por CPF</button>
+
+            <div *ngIf="formCpf.get('cpf')?.invalid && formCpf.get('cpf')?.touched "
+            class="invalid-feedback position-relative" style="left:0; top:100% ">
+               <p class="text-danger spanErro">Informe um CPF válido </p>
             </div>
-            <span *ngIf="mensagemErro" class="text-danger spanErro"> {{mensagemErro}}</span>
          </div>
+
       </form>
    </div>
    
    
 
-   <app-dados-cooperado *ngIf="dadosCooperado" style="position: absolute;bottom: 3%;width: 54%;">
+   <app-dados-cooperado *ngIf="dadosCooperado && !formCpf.get('cpf')?.invalid " style="position: absolute; width: 51%; right: 21vw;" class="appDados">
 
    </app-dados-cooperado>
 
 
    <div class="footer">
-      <button class="btn btn-light buttonFooter"> Dicas para abertura de conta</button>
-      <button *ngIf="buttonNovoCadastro" class="btn btn-light buttonFooter"> em construção</button>
-
+      <button *ngIf="buttonNovoCadastro" class="btn btn-light buttonFooter botaoNovaInd"> Indicar nova indicação</button>
+      <button class="btn btn-light buttonFooter botaoAlinha"> Dicas para abertura de conta</button>
    </div>
 </div>

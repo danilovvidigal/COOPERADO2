@@ -84,28 +84,45 @@
 }
 
 .informe {
-    position: relative;
-    bottom: 14vw;
+    display: flex;
     flex-direction: column;
-    width: 140%;
-    right: 9rem;
-    padding: 40px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 13vw;
+    right: 8vw;
 }
 
 .spanErro {
-    width: 44%;
     position: relative;
-    top: 4vw;
-    right: 35vw;
+    top: 3vw;
     font-size: 10px;
+    font-weight: bold;
+    right: 407px;
 }
-.input-error {
-    border-color: red !important;
+
+@media (max-width: 1066px) {
+    .spanErro {
+        position: relative;
+        top: 6vw;
+        font-size: 10px;
+        font-weight: bold;
+        right: 366px;
+    }
+
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 12px;
   }
+ 
+.input-invalid{
+    border: 1px solid red;
+}
 
 @media (max-width: 1050px) {
     .informe {
-        position: relative;
         position: relative;
         bottom: 13vw;
         left: 0%;
@@ -121,10 +138,17 @@
 }
 
 .cpfInforme {
-    position: relative;
-    bottom: 15rem;
     width: 100%;
-    right: 17%;
+    display: flex;
+    height: auto;
+    position: relative;
+    bottom: 12vw;
+    right: 8vw;
+}
+
+.inputCpf {
+    display: flex;
+    width: 140%;
 }
 
 @media (max-width: 1050px) {
@@ -143,27 +167,27 @@
     width: 300%;
     height: 6rem;
     position: relative;
-    right: 30%;
-    /* top: 59vw; */
-    bottom: 1vw;
-    /* padding: 5px; */
+    right: 178px;
+    top: 7vw;
 }
+
+
 
 @media (max-width: 1200px)  {
     .footer {
         position: relative;
         display: flex;
-        right: 11vw;
-        bottom: 3vw;
+        right: 10vw;
+        top: 8vw;
     }
 }
 
 @media (max-width: 900px)  {
     .footer {
-    position: relative;
-    display: flex;
-    right: 9vw;
-    bottom: 8vw;
+        position: relative;
+        display: flex;
+        right: 82px;
+        top: -8px;
     }
 }
 
@@ -186,10 +210,36 @@
   .buttonFooter {
     border: 2px solid #165C7D;
     color: #165C7D;
-    margin-left: 2%;
+    position: relative;
+    left: 5vw;
     font-weight: 500;
     border-radius: 3px;
     margin-bottom: 1%;
+  }
+
+  .botaoNovaInd {
+    display: flex;
+    position: relative;
+    left: 3vw;
+    top: 1%;
+    background-color: #165C7D;
+    color: #FFFFFF;
+  } 
+
+  @media (max-width: 900px) {
+    .botaoAlinha {
+        display: flex;
+        position: relative;
+        left: 7vw;
+        top: 0vw;
+    }
+
+    .botaoNovaInd {
+        display: flex;
+        position: relative;
+        top: 0%;
+        left: 5vw;
+      } 
   }
 
 
@@ -251,6 +301,15 @@
     }
 }
 
+@media (max-width: 900px) {
+    .informe {
+        position: relative;
+        bottom: 23vw;
+        flex-direction: column;
+        left: -4vw;
+    }
+}
+
 @media (max-width: 600px) {
     .informe {
         position: relative;
@@ -290,5 +349,22 @@
         height: 10px;
         border-radius: 25%;
         border: 1px solid #165C7D;
+    }
+}
+
+@media (max-width: 1239px) {
+    .appDados {
+        position: absolute;
+        width: 74%;
+        left: 1vw;
+    }
+
+}
+
+@media (max-width: 1066px) {
+    .appDados {
+        position: absolute;
+        width: 74%;
+        left: 7vw;
     }
 }

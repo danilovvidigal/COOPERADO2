@@ -5,6 +5,7 @@ import { ConsultaCpfComponent } from "./consulta-cpf/consulta-cpf.component";
 import { DadosCooperadoComponent } from "./dados-cooperado/dados-cooperado.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { MatCardModule } from '@angular/material/card';
+import { NgxMaskModule } from "ngx-mask";
 
 
 
@@ -14,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
-		MatCardModule
+		MatCardModule,
+		NgxMaskModule.forChild()
 	],
 	declarations: [
 		ConsultaCpfComponent,
