@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 
-export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
-
+export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -27,4 +26,5 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 export class DadosCooperadoComponent implements OnInit {
   nome: string = "";
   situacao: string = "";
- 
 
   constructor(private route: ActivatedRoute) { }
 
@@ -20,7 +19,7 @@ export class DadosCooperadoComponent implements OnInit {
       //carregar dados do cooperado usando o cpf
       this.nome = "John Doen";
       this.situacao = "Regular";
-    
+
     });
   }
 }
